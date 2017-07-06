@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Bent Creek Ceramics - Newsletter</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+      <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
+
+      <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+
+  </head>
+
+  <body>
+    <div class="newsletter">
+    <header>
+      <img src="images/bent-creek-logo.png" style="max-width:90%; max-height: 90%; margin-left: 1em; margin-top: .1em" alt="Logo" />
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="newsletter.html" class="active">Newsletter</a>
+      </nav>
+    </header>
+    <div class="nlform">
+      <form class="form" action="./process_form_data.php" method="post">
+        <h1>Sign Up for Our Weekly Newsletter</h1>
+        <h2>Stay up to date with events, activities, news and specials.</h2>
+        <input type="text" name="name" id="nameInput" placeholder="Name">
+        <input type="email" name="email" id="emailInput" placeholder="Email">
+        <button type="button" name="submit" id="signupButton">Submit</button>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var nameInput = document.getElementById('nameInput');
+  var emailInput = document.getElementById('emailInput');
+  var signupButton = document.getElementById('signupButton');
+  signupButton.addEventListener('click', function(e) {
+    var nameVal = nameInput.value;
+    var emailVal = emailInput.value;
+    if (nameVal && emailVal) {
+      alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+      nameInput.value = "";
+      emailInput.value = "";
+    } else {
+      alert('We would love for you to sign up, please provide both your name and email address.');
+    }
+  });
+</script>
+
+
+    <footer>
+      <p>Copyright 2017, Bent Creek Ceramics</p>
+    </footer>
+
+  </body>
+</html>
